@@ -1,0 +1,4 @@
+allstructure
+==================
+
+allstructure angular project
