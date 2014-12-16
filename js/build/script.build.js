@@ -2,20 +2,20 @@
 
 /**
  * @ngdoc overview
- * @name demoApp
+ * @name allStruct
  * @description
- * # demoApp
+ * # allStruct
  *
  * Main module of the application.
  */
-var demoApp = angular.module('demoApp', [
+var allStruct = angular.module('allStruct', [
   'ngSanitize',
   'ngRoute', 
-  'demoAppControllers'
+  'allStructControllers'
   ]
 );
 
-demoApp.config(['$routeProvider',
+allStruct.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider
     	.when('/', {
@@ -29,4 +29,13 @@ demoApp.config(['$routeProvider',
 ]);;'use strict';
 
 
-var demoApp = angular.module('demoAppControllers',[]);
+var allStruct = angular.module('allStructControllers',[]);
+
+allStruct.controller('navigationController',['$scope', function ($scope) {
+  $('.burgWrapper').unbind();
+	$('.burgWrapper').click(function() {
+		console.log('kevin');
+		$('.burg').toggleClass('activeBurg');
+		$('.mainNav').toggleClass('activeNav');
+	})
+}]);
