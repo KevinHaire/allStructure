@@ -15,7 +15,7 @@
 				<li><a href="">Projects</a></li>
 				<li><a href="">Health &amp Safety</a></li>
 				<li><a href="">Testimonials</a></li>
-				<li><a href="contact">Contact</a></li>
+				<li><a href="/contact">Contact</a></li>
 			</ul>
 		</nav>
 	</div>

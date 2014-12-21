@@ -4,18 +4,9 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    bower_concat: {
-      all: {
-        dest: 'js/build/_bower.js',
-        bowerOptions: {
-          relative: false
-        }
-      }
-    },
-
     uglify: {
       build: {
-        src: ['js/app.js', 'js/controllers/*.js'],
+        src: ['js/*.js'],
         dest: 'js/build/script.build.js'
       }
     },
@@ -25,7 +16,7 @@ module.exports = function(grunt) {
         separator: ';',
       },
       dist: {
-        src: ['js/app.js', 'js/controllers/*.js'],
+        src: ['js/*.js'],
         dest: 'js/build/script.build.js',
       },
     },
@@ -66,7 +57,7 @@ module.exports = function(grunt) {
         livereload: true,
       },
       scripts: {
-        files: ['js/*.js', 'js/controllers/*.js'],
+        files: ['js/*.js'],
         tasks: ['concat'],
         options: {
           spawn: false,
@@ -86,7 +77,6 @@ module.exports = function(grunt) {
   });
 
   // Load grunt tasks
-  grunt.loadNpmTasks('grunt-bower-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
@@ -96,7 +86,7 @@ module.exports = function(grunt) {
 
 
   // Default task(s).
-  grunt.registerTask('default', ['bower_concat', 'uglify', 'sass', 'autoprefixer', 'cssmin']);
-  grunt.registerTask('dev', ['bower_concat', 'concat', 'sass', 'autoprefixer', 'cssmin', 'watch']);
+  grunt.registerTask('default', ['uglify', 'sass', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('dev', ['concat', 'sass', 'autoprefixer', 'cssmin', 'watch']);
 
 };
