@@ -15,15 +15,20 @@ var allStruct = angular.module('allStruct', [
   ]
 );
 
-allStruct.config(['$routeProvider',
-  function($routeProvider) {
+allStruct.config(['$routeProvider', '$locationProvider',
+  function($routeProvider, $locationProvider) {
     $routeProvider
     	.when('/', {
     		templateUrl: 'views/home.php',
     		controller: ''
     	})
+      .when('/contact', {
+        templateUrl: 'views/contact.php',
+        controller: ''
+      })
       .otherwise({
         redirectTo: '/'
       });
+      $locationProvider.html5Mode(true);
   }
 ]);

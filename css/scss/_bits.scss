@@ -1,4 +1,73 @@
+@mixin breakpoint($point) {
+  @if $point == centerFixed {
+    @media (min-width: 1025px) { @content; }
+  }
+  @else if $point == mamaBear {
+    @media (min-width: 1025px) { @content; }
+  }
+  @else if $point == teenBear {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == babyBear {
+    @media (min-width: 600px)  { @content; }
+  }
+}
+
+a, a:hover, a:active, a:focus {
+	outline: 0;
+}
+
 
 $mainBlue: #003470;
 $darkBlue: #1b1464;
 $grey: #f6f5f1;
+$lightGrey: #a1a1a1;
+$lightBrown: #f6f5f1;
+$mainText: #6d6b6c;
+
+body {
+	line-height:1.8em;
+}
+
+h1 {
+	font-size:1.7em;
+	color:#000000;
+	font-weight:normal;
+}
+
+h2 {
+	font-size:1.4em;
+	color:$mainBlue;
+	font-weight:normal;
+}
+
+p {
+	color:$mainText;
+}
+
+.button {
+	text-align:center;
+	button {
+		width:75%;
+		margin:0 auto;
+		padding:1em 0;
+		background:#ffffff;
+		box-shadow:2px 2px 0 $lightGrey;
+		border-radius:.5em;
+		-webkit-appearance:none;
+		border:0;	
+		@include breakpoint(babyBear) {
+			width:300px;
+		}
+	}
+	
+}
+
+.contain {
+	width:95%;
+	margin:auto;
+	@media all and (min-width:1040px) {
+		width:1025px;
+	}
+}
+
