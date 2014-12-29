@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	var si = $('#gallery-1').royalSlider({
     addActiveClass: true,
     arrowsNav: false,
@@ -21,4 +22,11 @@ $(document).ready(function() {
       navigateByCenterClick: true
     }
   }).data('royalSlider');	
+
+	$("a").each(function(){
+		if ($(this).attr("href") == window.location.pathname) {
+			$(this).addClass("on");
+		}
+	})
+
 })

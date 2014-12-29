@@ -13,11 +13,6 @@
   }
 }
 
-a, a:hover, a:active, a:focus {
-	outline: 0;
-}
-
-
 $mainBlue: #003470;
 $darkBlue: #1b1464;
 $grey: #f6f5f1;
@@ -27,6 +22,10 @@ $mainText: #6d6b6c;
 
 body {
 	line-height:1.8em;
+}
+
+a, a:hover, a:active, a:focus, button, button:hover, button:active, button:focus {
+	outline: 0;
 }
 
 h1 {
@@ -45,6 +44,10 @@ p {
 	color:$mainText;
 }
 
+img {
+	max-width:100%;
+}
+
 .button {
 	text-align:center;
 	button {
@@ -56,6 +59,12 @@ p {
 		border-radius:.5em;
 		-webkit-appearance:none;
 		border:0;	
+		transition:all .2s ease;
+		&:active {
+			box-shadow:none;
+			transform: translate(2px,2px);
+			transition:all .2s ease;
+		}
 		@include breakpoint(babyBear) {
 			width:300px;
 		}
@@ -66,8 +75,23 @@ p {
 .contain {
 	width:95%;
 	margin:auto;
+	&:after {
+		content:'';
+		display:table;
+		clear:both;
+	}
 	@media all and (min-width:1040px) {
 		width:1025px;
 	}
+}
+
+.pageHeader {
+	text-align:center;
+	color:$mainBlue;
+}
+
+.on {
+	color:$mainBlue !important;
+	font-weight:bold;
 }
 

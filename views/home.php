@@ -7,7 +7,9 @@
 	    <a class="rsImg" href="images/banner1.jpg" data-rsw="509" data-rsh="387"></a>
 	  </div>
 	  <div class="button">
-			<button>Get A Quote Now</button>
+	  	<a href="/contact">
+				<button>Get A Quote Now</button>
+			</a>
 		</div>
 	</div>
 </section>

@@ -379,12 +379,12 @@ table {
   border-spacing: 0;
 }
 
-a, a:hover, a:active, a:focus {
-  outline: 0;
-}
-
 body {
   line-height: 1.8em;
+}
+
+a, a:hover, a:active, a:focus, button, button:hover, button:active, button:focus {
+  outline: 0;
 }
 
 h1 {
@@ -403,6 +403,10 @@ p {
   color: #6d6b6c;
 }
 
+img {
+  max-width: 100%;
+}
+
 .button {
   text-align: center;
 }
@@ -415,6 +419,15 @@ p {
   border-radius: .5em;
   -webkit-appearance: none;
   border: 0;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.button button:active {
+  box-shadow: none;
+  -webkit-transform: translate(2px, 2px);
+  transform: translate(2px, 2px);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 @media (min-width: 600px) {
   .button button {
@@ -426,10 +439,25 @@ p {
   width: 95%;
   margin: auto;
 }
+.contain:after {
+  content: '';
+  display: table;
+  clear: both;
+}
 @media all and (min-width: 1040px) {
   .contain {
     width: 1025px;
   }
+}
+
+.pageHeader {
+  text-align: center;
+  color: #003470;
+}
+
+.on {
+  color: #003470 !important;
+  font-weight: bold;
 }
 
 .mainHeader {
@@ -1484,6 +1512,17 @@ img.rsImg {
   float: left;
   text-align: center;
 }
+.iconPod img {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.iconPod img:hover {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  cursor: pointer;
+}
 .iconPod p {
   display: none;
 }
@@ -1499,6 +1538,57 @@ img.rsImg {
 }
 .iconPod img {
   max-width: 90%;
+}
+
+@media (min-width: 1025px) {
+  .contactFormContainer {
+    width: 50%;
+    float: left;
+    padding: 0 1em 0 0;
+  }
+}
+.contactFormContainer:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+@media (min-width: 1025px) {
+  .mapEmbed {
+    width: 50%;
+    float: left;
+    padding: 2.4em 0 0 1em;
+  }
+}
+
+.contactForm label {
+  display: block;
+  font-weight: bold;
+  color: #003470;
+  margin-bottom: .75em;
+}
+.contactForm input, .contactForm textarea {
+  width: 100%;
+  margin-bottom: 1em;
+  resize: none;
+  padding: 1em;
+  border: 1px solid #9c9c9c;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+.contactForm input:hover, .contactForm input:active, .contactForm input:focus, .contactForm textarea:hover, .contactForm textarea:active, .contactForm textarea:focus {
+  outline: 0;
+}
+.contactForm input[type="submit"] {
+  background: #003470;
+  color: #ffffff;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .contactForm input[type="submit"] {
+    width: 190px;
+    float: right;
+  }
 }
 
 .mainFooter {
