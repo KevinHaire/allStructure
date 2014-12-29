@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+  $('.burgWrapper').unbind();
+  $('.burgWrapper').click(function() {
+    console.log('kevin');
+    $('.burg').toggleClass('activeBurg');
+    $('.mainNav').toggleClass('activeNav');
+  })
+
 	var si = $('#gallery-1').royalSlider({
     addActiveClass: true,
     arrowsNav: false,
