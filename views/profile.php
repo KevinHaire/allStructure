@@ -1,4 +1,4 @@
-<div class="contain">
+<div class="contain pageContainer">
 	<h1 class="pageHeader">Business Profile</h1>
 	<img style="float:right;" src="images/banner1.jpg" alt="">
 	<p>All Structure Group Ltd, provides a complete range of steel erection and construction related services to a diverse client base. Family orientated team work, our desire for client satisfaction and our distinct individualized project management approach, coupled with our prioritized corporate safety policy is the basis of our company’s’ success.</p>

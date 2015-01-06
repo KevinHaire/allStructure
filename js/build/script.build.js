@@ -148,6 +148,34 @@ a._i7:a.slider}),a.ev.on("rsAfterSizePropSet",function(){var b,c=a.st.visibleNea
     }
   }).data('royalSlider');	
 
+
+  $('#gallery-2, #gallery-3').royalSlider({
+    fullscreen: {
+      enabled: true,
+      nativeFS: true
+    },
+    controlNavigation: 'thumbnails',
+    autoScaleSlider: true, 
+    autoScaleSliderWidth: 960,     
+    autoScaleSliderHeight: 850,
+    loop: false,
+    imageScaleMode: 'fit-if-smaller',
+    navigateByClick: true,
+    numImagesToPreload:2,
+    arrowsNav:true,
+    arrowsNavAutoHide: true,
+    arrowsNavHideOnTouch: true,
+    keyboardNavEnabled: true,
+    fadeinLoadedSlide: true,
+    globalCaption: true,
+    globalCaptionInside: false,
+    thumbs: {
+      appendSpan: true,
+      firstMargin: true,
+      paddingBottom: 4
+    }
+  });
+
 	$("a").each(function(){
 		if ($(this).attr("href") == window.location.pathname) {
 			$(this).addClass("on");

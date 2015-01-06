@@ -1,5 +1,5 @@
 <section class="sliderSection">
-	<div class="contain">
+	<div class="sliderContain">
 		<h1>Quick, Efficient, Steel Building Erecting</h1>
 		<div id="gallery-1" class="royalSlider rsDefault visibleNearby">
 	    <a class="rsImg" href="images/banner1.jpg" data-rsw="509" data-rsh="387"></a>

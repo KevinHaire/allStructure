@@ -5,4 +5,4 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
 <![endif]-->
 <link rel="stylesheet" type="text/css" href="css/minified/global.min.css"/>
-<title>Demo App</title>
+<title>All Structure Group LTD.</title>

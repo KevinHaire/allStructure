@@ -85,6 +85,10 @@ img {
 	}
 }
 
+.pageContainer {
+	padding:2em 0;
+}
+
 .pageHeader {
 	text-align:center;
 	color:$mainBlue;
@@ -95,3 +99,6 @@ img {
 	font-weight:bold;
 }
 
+.galleryHeader {
+	text-align:center;
+}

@@ -1,4 +1,4 @@
-<div class="contain">
+<div class="contain pageContainer">
 	<h1 class="pageHeader">Contact Us</h1>
 
 	<div class="contactFormContainer">
